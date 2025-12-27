@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from '../components/Navbar.jsx';
 import BackButton from '../components/BackButton.jsx';
+import { getApiUrl, API_ENDPOINTS } from '../config/api.js';
 
 const AdminPanel = () => {
   const [activeTab, setActiveTab] = useState('crops');
@@ -37,17 +38,17 @@ const AdminPanel = () => {
       
       if (activeTab === 'crops') {
         console.log('🌾 Fetching crops data...');
-        const res = await axios.get('http://localhost:5000/api/crops', config);
+        const res = await axios.get(getApiUrl(API_ENDPOINTS.CROPS), config);
         console.log('✅ Crops data received:', res.data?.length || 0, 'items');
         setCrops(res.data || []);
       } else if (activeTab === 'pests') {
         console.log('🐛 Fetching pests data...');
-        const res = await axios.get('http://localhost:5000/api/pests', config);
+        const res = await axios.get(getApiUrl(API_ENDPOINTS.PESTS), config);
         console.log('✅ Pests data received:', res.data?.length || 0, 'items');
         setPests(res.data || []);
       } else if (activeTab === 'feedback') {
         console.log('💬 Fetching feedback data...');
-        const res = await axios.get('http://localhost:5000/api/feedback', config);
+        const res = await axios.get(getApiUrl(API_ENDPOINTS.FEEDBACK), config);
         console.log('✅ Feedback data received:', res.data?.feedback?.length || 0, 'items');
         setFeedback(res.data?.feedback || []);
         setFeedbackStats(res.data?.statistics || {});
