@@ -5,8 +5,7 @@ const config = {
     API_BASE_URL: 'http://localhost:5000',
   },
   production: {
-    // Replace this with your actual Vercel backend URL once deployed
-    API_BASE_URL: 'https://your-backend-app.vercel.app',
+    API_BASE_URL: 'https://insect-pest-backend.vercel.app',
   }
 };
 
