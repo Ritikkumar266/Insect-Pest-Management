@@ -137,3 +137,4 @@ The app now supports real AI-powered pest identification using Google Cloud Visi
 - Add search and filter functionality
 - Mobile app version
 - Multi-language support
+"# ProjectPEP" 
