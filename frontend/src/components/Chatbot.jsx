@@ -1,7 +1,8 @@
+import API_URL from '../config/api';
+
 // import React, { useState, useRef, useEffect } from 'react';
 // import { translations } from '../lib/languages.js';
 // import LanguageSelector from './LanguageSelector.jsx';
-// import API_URL from '../config/api';
 
 // const Chatbot = () => {
 //   const [isOpen, setIsOpen] = useState(false);
