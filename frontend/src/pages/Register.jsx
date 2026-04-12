@@ -12,7 +12,6 @@ const Register = () => {
   const [otp, setOtp] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const [resendLoading, setResendLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -85,32 +84,6 @@ const Register = () => {
     }
   };
 
-  // ✅ RESEND OTP
-  const handleResendOTP = async () => {
-    setError('');
-    setResendLoading(true);
-
-    try {
-      await axios.post(`${API_URL}/api/auth/resend-otp`, { email });
-
-      setError('New OTP sent to your email!');
-      setTimeout(() => setError(''), 3000);
-
-    } catch (err) {
-      console.log("RESEND ERROR:", err);
-
-      setError(
-        err.response?.data?.error ||
-        err.response?.data?.message ||
-        err.message ||
-        'Failed to resend OTP'
-      );
-
-    } finally {
-      setResendLoading(false);
-    }
-  };
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-green-600">
       <div className="bg-white p-8 rounded-xl w-full max-w-md shadow-lg">
@@ -151,6 +124,7 @@ const Register = () => {
               onChange={(e) => setPassword(e.target.value)}
               className="w-full mb-3 p-2 border rounded"
               required
+              minLength="6"
             />
 
             <button
@@ -188,14 +162,6 @@ const Register = () => {
               className="w-full bg-green-600 text-white p-2 rounded"
             >
               {loading ? "Verifying..." : "Verify OTP"}
-            </button>
-
-            <button
-              type="button"
-              onClick={handleResendOTP}
-              className="w-full mt-2 text-blue-500"
-            >
-              Resend OTP
             </button>
 
           </form>
