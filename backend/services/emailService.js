@@ -21,7 +21,15 @@ const generateOTP = () => {
 // Send OTP email
 const sendOTPEmail = async (email, otp) => {
   try {
+    console.log('📧 Attempting to send OTP email to:', email);
+    console.log('📧 Email user configured:', !!process.env.EMAIL_USER);
+    console.log('📧 Email pass configured:', !!process.env.EMAIL_PASS);
+    
     const transporter = createTransporter();
+    
+    // Verify transporter connection
+    await transporter.verify();
+    console.log('✅ Email transporter verified successfully');
     
     const mailOptions = {
       from: process.env.EMAIL_USER || 'noreply@pestmanagement.com',
@@ -73,10 +81,11 @@ const sendOTPEmail = async (email, otp) => {
     };
 
     const info = await transporter.sendMail(mailOptions);
-    console.log('OTP email sent:', info.messageId);
+    console.log('✅ OTP email sent successfully:', info.messageId);
     return true;
   } catch (error) {
-    console.error('Email sending failed:', error);
+    console.error('❌ Email sending failed:', error.message);
+    console.error('Error details:', error);
     return false;
   }
 };

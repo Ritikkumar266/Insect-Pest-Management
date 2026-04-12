@@ -44,10 +44,10 @@ router.post('/send-otp', [
     if (!emailSent) {
       // Development mode: Show OTP in console and response
       console.log(`\n🔐 DEVELOPMENT MODE - OTP for ${email}: ${otp}\n`);
-      return res.json({ 
-        message: 'Email service not configured. OTP logged to console (development mode)',
-        email: email,
-        developmentOTP: process.env.NODE_ENV === 'development' ? otp : undefined
+      console.error('⚠️ Email sending failed - check email configuration');
+      return res.status(500).json({ 
+        message: 'Email service failed. Please check server logs.',
+        error: 'Email configuration issue'
       });
     }
 
