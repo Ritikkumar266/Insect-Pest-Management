@@ -1,19 +1,10 @@
 // API Configuration for different environments
+// Using Vite's import.meta.env instead of process.env
 
-const config = {
-  development: {
-    API_BASE_URL: 'http://localhost:5000',
-  },
-  production: {
-    API_BASE_URL: 'https://insect-pest-management.onrender.com',
-  }
-};
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
-const environment = process.env.NODE_ENV || 'development';
-const currentConfig = config[environment];
-
-// Export the current configuration
-export const API_BASE_URL = currentConfig.API_BASE_URL;
+console.log('🔧 API Base URL:', API_BASE_URL);
+console.log('🔧 Environment:', import.meta.env.MODE);
 
 // Helper function to get full API URL
 export const getApiUrl = (endpoint) => {
