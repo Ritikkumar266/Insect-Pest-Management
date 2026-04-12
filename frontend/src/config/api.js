@@ -5,7 +5,7 @@ const config = {
     API_BASE_URL: 'http://localhost:5000',
   },
   production: {
-    API_BASE_URL: 'https://pest-management-backend.onrender.com',
+    API_BASE_URL: 'https://insect-pest-management.onrender.com',
   }
 };
 
