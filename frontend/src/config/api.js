@@ -1,10 +1,9 @@
-// API Configuration for different environments
-// Using Vite's import.meta.env instead of process.env
+// API Configuration for React
+// React only exposes env variables that start with REACT_APP_
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 console.log('🔧 API Base URL:', API_BASE_URL);
-console.log('🔧 Environment:', import.meta.env.MODE);
 
 // Helper function to get full API URL
 export const getApiUrl = (endpoint) => {
@@ -46,5 +45,3 @@ export const API_ENDPOINTS = {
   // Health check
   HEALTH: '/api/health'
 };
-
-console.log(`🔧 API Configuration loaded:`, { API_BASE_URL, mode: import.meta.env.MODE });
