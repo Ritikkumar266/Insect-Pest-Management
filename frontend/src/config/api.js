@@ -5,6 +5,9 @@ const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 console.log('🔧 API Base URL:', API_BASE_URL);
 
+// Export as default for direct imports
+export default API_BASE_URL;
+
 // Helper function to get full API URL
 export const getApiUrl = (endpoint) => {
   // Remove leading slash if present
