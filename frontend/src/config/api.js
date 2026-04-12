@@ -47,4 +47,4 @@ export const API_ENDPOINTS = {
   HEALTH: '/api/health'
 };
 
-console.log(`🔧 API Configuration loaded for ${environment}:`, currentConfig);
+console.log(`🔧 API Configuration loaded:`, { API_BASE_URL, mode: import.meta.env.MODE });
