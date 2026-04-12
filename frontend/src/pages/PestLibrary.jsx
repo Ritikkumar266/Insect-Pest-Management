@@ -32,6 +32,7 @@ const PestLibrary = () => {
 
   useEffect(() => {
     filterPests();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pests, searchTerm, selectedCrop, selectedType]);
 
   const fetchData = async () => {

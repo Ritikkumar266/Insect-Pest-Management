@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar.jsx';
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
-  const [selectedStat, setSelectedStat] = useState(null);
 
   return (
     <div className="min-h-screen relative overflow-hidden">

@@ -13,7 +13,6 @@ const Register = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [resendLoading, setResendLoading] = useState(false);
-  const { register } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSendOTP = async (e) => {

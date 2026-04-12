@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
-  const [hoveredFeature, setHoveredFeature] = useState(null);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   const openVideoModal = () => setIsVideoModalOpen(true);
@@ -299,8 +298,6 @@ const LandingPage = () => {
             ].map((feature, index) => (
               <div 
                 key={index}
-                onMouseEnter={() => setHoveredFeature(index)}
-                onMouseLeave={() => setHoveredFeature(null)}
                 className="group relative bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100/50 overflow-hidden"
                 style={{ animationDelay: feature.delay }}
               >
@@ -455,25 +452,25 @@ const LandingPage = () => {
             <div>
               <h3 className="text-white font-bold mb-4">Product</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-green-400 transition">Features</a></li>
-                <li><a href="#" className="hover:text-green-400 transition">Pricing</a></li>
-                <li><a href="#" className="hover:text-green-400 transition">Security</a></li>
+                <li><button className="hover:text-green-400 transition text-left">Features</button></li>
+                <li><button className="hover:text-green-400 transition text-left">Pricing</button></li>
+                <li><button className="hover:text-green-400 transition text-left">Security</button></li>
               </ul>
             </div>
             <div>
               <h3 className="text-white font-bold mb-4">Company</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-green-400 transition">About</a></li>
-                <li><a href="#" className="hover:text-green-400 transition">Blog</a></li>
-                <li><a href="#" className="hover:text-green-400 transition">Contact</a></li>
+                <li><button className="hover:text-green-400 transition text-left">About</button></li>
+                <li><button className="hover:text-green-400 transition text-left">Blog</button></li>
+                <li><button className="hover:text-green-400 transition text-left">Contact</button></li>
               </ul>
             </div>
             <div>
               <h3 className="text-white font-bold mb-4">Legal</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-green-400 transition">Privacy</a></li>
-                <li><a href="#" className="hover:text-green-400 transition">Terms</a></li>
-                <li><a href="#" className="hover:text-green-400 transition">Cookie Policy</a></li>
+                <li><button className="hover:text-green-400 transition text-left">Privacy</button></li>
+                <li><button className="hover:text-green-400 transition text-left">Terms</button></li>
+                <li><button className="hover:text-green-400 transition text-left">Cookie Policy</button></li>
               </ul>
             </div>
           </div>
