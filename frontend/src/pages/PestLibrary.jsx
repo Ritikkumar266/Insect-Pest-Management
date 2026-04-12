@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import API_URL from '../config/api';
 import Navbar from '../components/Navbar.jsx';
 import BackButton from '../components/BackButton.jsx';
 
@@ -38,8 +39,8 @@ const PestLibrary = () => {
   const fetchData = async () => {
     try {
       const [pestsRes, cropsRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/pests'),
-        axios.get('http://localhost:5000/api/crops')
+        axios.get(`${API_URL}/api/pests`),
+        axios.get(`${API_URL}/api/crops`)
       ]);
       
       setPests(pestsRes.data);

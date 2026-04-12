@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext.jsx';
 import Navbar from '../components/Navbar.jsx';
+import API_URL from '../config/api';
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
@@ -12,7 +13,7 @@ const Dashboard = () => {
       <div 
         className="fixed inset-0 z-0"
         style={{
-          backgroundImage: 'url(http://localhost:5000/uploads/backgrounds/farm.jpg)',
+          backgroundImage: `url(${API_URL}/uploads/backgrounds/farm.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'

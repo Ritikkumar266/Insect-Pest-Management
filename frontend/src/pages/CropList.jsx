@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import API_URL from '../config/api';
 import Navbar from '../components/Navbar.jsx';
 import BackButton from '../components/BackButton.jsx';
 
@@ -16,7 +17,7 @@ const CropList = () => {
 
   const fetchCrops = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/crops');
+      const res = await axios.get(`${API_URL}/api/crops`);
       setCrops(res.data);
       const uniqueCategories = [...new Set(res.data.map(crop => crop.category))];
       setCategories(uniqueCategories);

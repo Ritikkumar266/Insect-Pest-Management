@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import API_URL from '../config/api';
 
 const Register = () => {
   const [step, setStep] = useState(1); // 1: Registration form, 2: OTP verification
@@ -20,7 +21,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:5000/api/auth/send-otp', {
+      await axios.post(`${API_URL}/api/auth/send-otp`, {
         name,
         email,
         password
@@ -39,7 +40,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/verify-otp', {
+      const res = await axios.post(`${API_URL}/api/auth/verify-otp`, {
         name,
         email,
         password,
@@ -64,7 +65,7 @@ const Register = () => {
     setResendLoading(true);
 
     try {
-      await axios.post('http://localhost:5000/api/auth/resend-otp', { email });
+      await axios.post(`${API_URL}/api/auth/resend-otp`, { email });
       setError(''); // Clear any previous errors
       // Show success message temporarily
       setError('New OTP sent to your email!');

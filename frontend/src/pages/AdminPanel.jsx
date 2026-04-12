@@ -3,6 +3,7 @@ import axios from 'axios';
 import Navbar from '../components/Navbar.jsx';
 import BackButton from '../components/BackButton.jsx';
 import { getApiUrl, API_ENDPOINTS } from '../config/api.js';
+import API_URL from '../config/api';
 
 const AdminPanel = () => {
   const [activeTab, setActiveTab] = useState('crops');
@@ -94,7 +95,7 @@ const AdminPanel = () => {
         const imageFormData = new FormData();
         imageFormData.append('image', imageFile);
         
-        const uploadRes = await axios.post('http://localhost:5000/api/upload', imageFormData, {
+        const uploadRes = await axios.post(`${API_URL}/api/upload`, imageFormData, {
           headers: { 
             'Content-Type': 'multipart/form-data',
             Authorization: `Bearer ${token}`
@@ -120,7 +121,7 @@ const AdminPanel = () => {
         };
       }
       
-      await axios.post(`http://localhost:5000${endpoint}`, dataToSubmit, config);
+      await axios.post(`${API_URL}${endpoint}`, dataToSubmit, config);
       
       setFormData({});
       setImageFile(null);
@@ -150,7 +151,7 @@ const AdminPanel = () => {
         endpoint = '/api/feedback';
       }
       
-      await axios.delete(`http://localhost:5000${endpoint}/${id}`, config);
+      await axios.delete(`${API_URL}${endpoint}/${id}`, config);
       fetchData();
     } catch (err) {
       console.error('Error:', err);
@@ -165,7 +166,7 @@ const AdminPanel = () => {
         headers: { Authorization: `Bearer ${token}` }
       };
       
-      await axios.put(`http://localhost:5000/api/feedback/${id}`, {
+      await axios.put(`${API_URL}/api/feedback/${id}`, {
         status,
         adminResponse
       }, config);
@@ -184,7 +185,7 @@ const AdminPanel = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(http://localhost:5000/uploads/backgrounds/adminbg.jpg)',
+          backgroundImage: `url(${API_URL}/uploads/backgrounds/adminbg.jpg)`,
         }}
       >
         {/* Dark overlay for better content visibility */}
@@ -726,8 +727,8 @@ const AdminPanel = () => {
                                 <img
                                   src={
                                     activeTab === 'crops' 
-                                      ? (item.image.startsWith('http') ? item.image : `http://localhost:5000${item.image}`)
-                                      : (item.images[0].startsWith('http') ? item.images[0] : `http://localhost:5000${item.images[0]}`)
+                                      ? (item.image.startsWith('http') ? item.image : `${API_URL}${item.image}`)
+                                      : (item.images[0].startsWith('http') ? item.images[0] : `${API_URL}${item.images[0]}`)
                                   }
                                   alt={item.name}
                                   className="w-full h-full object-cover"

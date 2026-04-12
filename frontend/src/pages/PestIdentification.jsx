@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import API_URL from '../config/api';
 import Navbar from '../components/Navbar.jsx';
 import BackButton from '../components/BackButton.jsx';
 import PestManagementAdvisory from '../components/PestManagementAdvisory.jsx';
@@ -34,7 +35,7 @@ const PestIdentification = () => {
     formData.append('image', selectedFile);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/upload/identify', formData, {
+      const res = await axios.post(`${API_URL}/api/upload/identify`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setResult(res.data);

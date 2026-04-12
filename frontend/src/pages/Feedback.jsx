@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import API_URL from '../config/api';
 import Navbar from '../components/Navbar.jsx';
 import BackButton from '../components/BackButton.jsx';
 
@@ -42,7 +43,7 @@ const Feedback = () => {
     try {
       console.log('📝 Submitting feedback:', formData);
 
-      const response = await axios.post('http://localhost:5000/api/feedback', formData);
+      const response = await axios.post(`${API_URL}/api/feedback`, formData);
 
       console.log('✅ Feedback submitted successfully:', response.data);
 

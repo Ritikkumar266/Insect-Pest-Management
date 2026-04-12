@@ -1,6 +1,7 @@
 // import React, { useState, useRef, useEffect } from 'react';
 // import { translations } from '../lib/languages.js';
 // import LanguageSelector from './LanguageSelector.jsx';
+// import API_URL from '../config/api';
 
 // const Chatbot = () => {
 //   const [isOpen, setIsOpen] = useState(false);
@@ -755,7 +756,7 @@ const Chatbot = () => {
 
       // Try the full URL first to see if it's a proxy issue
       const apiUrl = window.location.hostname === 'localhost' 
-        ? 'http://localhost:5000/api/chatbot/chat'
+        ? `${API_URL}/api/chatbot/chat`
         : '/api/chatbot/chat';
       
       console.log('🔗 Using API URL:', apiUrl);
@@ -1145,7 +1146,7 @@ const Chatbot = () => {
       formData.append('conversationHistory', JSON.stringify(conversationHistory));
 
       const apiUrl = window.location.hostname === 'localhost' 
-        ? 'http://localhost:5000/api/chatbot/analyze-image'
+        ? `${API_URL}/api/chatbot/analyze-image`
         : '/api/chatbot/analyze-image';
 
       const response = await fetch(apiUrl, {
@@ -1241,7 +1242,7 @@ const Chatbot = () => {
               try {
                 // Test with full URL
                 const baseUrl = window.location.hostname === 'localhost' 
-                  ? 'http://localhost:5000'
+                  ? API_URL
                   : '';
                 
                 // Test 1: Check status endpoint

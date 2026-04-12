@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import API_URL from '../config/api';
 import Navbar from '../components/Navbar.jsx';
 import BackButton from '../components/BackButton.jsx';
 import PestManagementAdvisory from '../components/PestManagementAdvisory.jsx';
@@ -17,7 +18,7 @@ const PestDetails = () => {
 
   const fetchPest = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/pests/${id}`);
+      const res = await axios.get(`${API_URL}/api/pests/${id}`);
       setPest(res.data);
       setLoading(false);
     } catch (err) {
