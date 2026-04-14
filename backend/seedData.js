@@ -10,61 +10,61 @@ const crops = [
     name: 'Rice',
     category: 'Cereal',
     description: 'Rice is a staple food crop grown in flooded fields and is the primary food source for over half the world\'s population. It requires warm temperatures (20-35°C) and abundant water supply. Rice cultivation involves transplanting seedlings in puddled fields with standing water. The crop is highly susceptible to various pests including stem borers, planthoppers, and leaf folders that can significantly reduce yield. Proper water management, balanced fertilization, and integrated pest management are crucial for successful rice production. Harvest typically occurs 3-6 months after planting depending on the variety.',
-    image: 'http://localhost:5000/uploads/crop-images/Rice.jpg'
+    image: 'https://insect-pest-management.onrender.com/uploads/crop-images/Rice.jpg'
   },
   {
     name: 'Wheat',
     category: 'Cereal',
     description: 'Wheat is one of the world\'s most important cereal crops, primarily used for making flour, bread, and pasta. It thrives in temperate climates with moderate rainfall (300-1000mm annually) and temperatures between 12-25°C. Wheat is typically sown in autumn (winter wheat) or spring (spring wheat) and requires well-drained, fertile soils with pH 6.0-7.5. The crop faces challenges from various pests including aphids, armyworms, and Hessian flies at different growth stages. Proper crop rotation, timely sowing, and balanced nutrition help maintain healthy wheat crops. Harvest occurs when grain moisture content reaches 12-14%.',
-    image: 'http://localhost:5000/uploads/crop-images/Wheat.jpg'
+    image: 'https://insect-pest-management.onrender.com/uploads/crop-images/Wheat.jpg'
   },
   {
     name: 'Maize (Corn)',
     category: 'Cereal',
     description: 'Maize is a versatile cereal crop used for human food, animal feed, and industrial applications including biofuel production. It requires warm growing conditions (18-35°C) with adequate moisture during critical growth periods. Maize is typically planted in rows with proper spacing to ensure optimal light penetration and air circulation. The crop is vulnerable to numerous pest challenges including corn borers, armyworms, cutworms, and aphids that can cause significant yield losses. Modern maize production often involves hybrid varieties, precision planting, and integrated pest management strategies. The crop has a growing period of 90-120 days depending on variety and environmental conditions.',
-    image: 'http://localhost:5000/uploads/crop-images/Maize.jpg'
+    image: 'https://insect-pest-management.onrender.com/uploads/crop-images/Maize.jpg'
   },
   {
     name: 'Cotton',
     category: 'Fiber',
     description: 'Cotton is the world\'s most important natural fiber crop, providing raw material for textile industry. It requires a long, warm growing season (180-220 frost-free days) with temperatures between 18-35°C and moderate rainfall (500-1200mm). Cotton plants are highly susceptible to bollworm complex, whiteflies, aphids, and thrips that can severely impact both fiber quality and yield. The crop benefits from well-drained, fertile soils with good organic matter content. Modern cotton production often utilizes Bt varieties for bollworm resistance and requires careful water management. Harvesting can be done manually or mechanically when bolls are fully mature and fiber moisture is optimal.',
-    image: 'http://localhost:5000/uploads/crop-images/Cotton.jpg'
+    image: 'https://insect-pest-management.onrender.com/uploads/crop-images/Cotton.jpg'
   },
   {
     name: 'Tomato',
     category: 'Vegetable',
     description: 'Tomatoes are widely cultivated warm-season vegetables rich in vitamins, minerals, and antioxidants like lycopene. They require temperatures between 18-29°C and are sensitive to frost. Tomatoes can be grown in open fields, greenhouses, or hydroponic systems depending on climate and market demands. The crop is highly susceptible to various insect pests including whiteflies, aphids, thrips, and fruit flies, as well as diseases like blight and mosaic viruses. Proper staking, pruning, and regular monitoring are essential for healthy tomato production. The crop requires consistent moisture but good drainage to prevent root diseases. Harvest timing is crucial for optimal flavor and shelf life.',
-    image: 'http://localhost:5000/uploads/crop-images/Tomato.jpg'
+    image: 'https://insect-pest-management.onrender.com/uploads/crop-images/Tomato.jpg'
   },
   {
     name: 'Potato',
     category: 'Vegetable',
     description: 'Potato is one of the world\'s most important food crops, serving as a staple food and source of carbohydrates for millions of people. It thrives in cool, moist climates with temperatures between 15-20°C and requires well-drained, loose soils with pH 5.0-6.5. Potatoes are grown from seed tubers and require hilling to prevent greening and improve tuber development. The crop faces significant challenges from Colorado potato beetle, aphids, cutworms, and various diseases affecting both foliage and tubers. Proper crop rotation, certified seed selection, and integrated pest management are crucial for successful potato production. Storage conditions must be carefully controlled to maintain quality and prevent sprouting.',
-    image: 'http://localhost:5000/uploads/crop-images/Potato.jpg'
+    image: 'https://insect-pest-management.onrender.com/uploads/crop-images/Potato.jpg'
   },
   {
     name: 'Cabbage',
     category: 'Vegetable',
     description: 'Cabbage is a cool-season leafy vegetable crop belonging to the Brassica family, rich in vitamins C and K. It prefers temperatures between 15-20°C and can tolerate light frosts. Cabbage requires fertile, well-drained soils with consistent moisture and benefits from regular fertilization throughout the growing season. The crop is highly susceptible to caterpillar pests including cabbage worms, loopers, and aphid infestations that can cause significant damage to developing heads. Proper spacing, crop rotation with non-brassica crops, and timely pest monitoring are essential for quality cabbage production. Harvest occurs when heads are firm and compact, typically 70-120 days after transplanting.',
-    image: 'http://localhost:5000/uploads/crop-images/Cabbage.jpg'
+    image: 'https://insect-pest-management.onrender.com/uploads/crop-images/Cabbage.jpg'
   },
   {
     name: 'Sugarcane',
     category: 'Cash Crop',
     description: 'Sugarcane is a major cash crop primarily grown for sugar production, biofuel, and various by-products. It requires tropical or subtropical climates with temperatures between 20-35°C and annual rainfall of 1000-1500mm. Sugarcane is a perennial crop that can be harvested multiple times (ratoons) from the same planting. The crop is affected by various pests including borers, scale insects, aphids, and whiteflies that can reduce both cane yield and sugar content. Proper field preparation, variety selection, and integrated pest management are crucial for profitable sugarcane production. The crop has a long growing cycle of 12-18 months and requires adequate irrigation during dry periods.',
-    image: 'http://localhost:5000/uploads/crop-images/Sugarcane.jpg'
+    image: 'https://insect-pest-management.onrender.com/uploads/crop-images/Sugarcane.jpg'
   },
   {
     name: 'Soybean',
     category: 'Legume',
     description: 'Soybean is an important protein-rich legume crop used for oil extraction, animal feed, and human consumption. It has the unique ability to fix atmospheric nitrogen through symbiotic relationship with Rhizobium bacteria, reducing fertilizer requirements. Soybeans prefer warm growing conditions (20-30°C) with adequate moisture during pod filling stages. The crop faces challenges from various defoliating insects including armyworms, aphids, whiteflies, and thrips that can significantly impact yield. Proper inoculation with appropriate Rhizobium strains, timely planting, and integrated pest management are essential for successful soybean production. The crop typically matures in 90-150 days depending on variety and growing conditions.',
-    image: 'http://localhost:5000/uploads/crop-images/soyabean.jpg'
+    image: 'https://insect-pest-management.onrender.com/uploads/crop-images/soyabean.jpg'
   },
   {
     name: 'Apple',
     category: 'Fruit',
     description: 'Apple is one of the most widely grown temperate fruit crops, requiring specific climatic conditions including cold winters (chill hours) and moderate summers. Apple trees are perennial and can be productive for many decades with proper care. The crop requires well-drained soils with pH 6.0-7.0 and benefits from regular pruning, thinning, and integrated orchard management. Apple orchards face numerous pest challenges including codling moth, aphids, mites, and scale insects that require careful monitoring and management to produce quality fruit. Modern apple production often involves dwarf rootstocks, high-density planting, and precision agriculture techniques. Harvest timing is critical for optimal fruit quality, storage life, and market value.',
-    image: 'http://localhost:5000/uploads/crop-images/Apple.jpg'
+    image: 'https://insect-pest-management.onrender.com/uploads/crop-images/Apple.jpg'
   }
 ];
 
@@ -75,7 +75,7 @@ const pests = [
     description: 'A major pest of rice that sucks sap from plants causing hopper burn.',
     symptoms: ['Yellowing of leaves', 'Stunted growth', 'Hopper burn appearance', 'Plant wilting'],
     management: 'Use resistant varieties, maintain proper water management, apply neem-based pesticides, and encourage natural predators like spiders.',
-    images: ['http://localhost:5000/uploads/pest-images/brown-planthopper.jpg']
+    images: ['https://insect-pest-management.onrender.com/uploads/pest-images/brown-planthopper.jpg']
   },
   {
     name: 'Rice Stem Borer',
