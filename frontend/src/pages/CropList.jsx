@@ -189,7 +189,7 @@ const CropList = () => {
                 <div className="relative overflow-hidden">
                   {crop.image && (
                     <img 
-                      src={crop.image} 
+                      src={`${API_URL}${crop.image}`} 
                       alt={crop.name} 
                       className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" 
                     />

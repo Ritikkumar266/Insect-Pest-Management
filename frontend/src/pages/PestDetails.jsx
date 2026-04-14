@@ -102,7 +102,7 @@ const PestDetails = () => {
               <div className="lg:w-2/5 h-80 lg:h-auto relative overflow-hidden">
                 {pest.images && pest.images.length > 0 ? (
                   <img 
-                    src={pest.images[0]} 
+                    src={`${API_URL}${pest.images[0]}`} 
                     alt={pest.name}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                   />

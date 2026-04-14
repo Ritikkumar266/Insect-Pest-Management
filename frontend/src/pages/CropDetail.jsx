@@ -71,7 +71,7 @@ const CropDetail = () => {
               {crop.image && (
                 <div className="lg:w-96 flex-shrink-0">
                   <img 
-                    src={crop.image} 
+                    src={`${API_URL}${crop.image}`} 
                     alt={crop.name} 
                     className="w-full h-80 object-cover rounded-xl shadow-lg hover:scale-105 transition-transform duration-300" 
                   />
@@ -120,7 +120,7 @@ const CropDetail = () => {
                       {pest.images && pest.images.length > 0 && (
                         <div className="flex-shrink-0">
                           <img 
-                            src={pest.images[0]} 
+                            src={`${API_URL}${pest.images[0]}`} 
                             alt={pest.name}
                             className="w-32 h-32 object-cover rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
                           />
